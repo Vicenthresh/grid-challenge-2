@@ -1,0 +1,148 @@
+$grid-gaps: (
+  "0": 0,
+  "1": 10px,
+  "2": 20px,
+  "3": 30px,
+);
+$layout-values: flex-start, flex-end, center, space-between, space-around;
+
+// base layout
+@include xs {
+  .container-xs {
+    width: 100%;
+    width: 480px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
+
+@include xl {
+  .container-xl {
+    width: 100%;
+    max-width: 1200px;
+    max-height: 1600px;
+    height: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+@mixin grid($n-col: 1, $n-row: 1){
+  display: grid;
+  grid-template-columns: repeat($n-col, 1fr);
+  grid-template-rows: repeat($n-row, 1fr);
+  grid-gap: 0px;
+}
+
+.grid {
+  @include grid;
+}
+
+@for $i from 1 through 12 {
+
+    // col and row classes
+  @include xs {
+
+      @for $j from 1 through 12 {
+        .grid-col-#{$i}-row-#{$j}-xs {
+          @include grid($i, $j);
+        } 
+      }
+
+      .col-#{$i}-xs {
+        grid-column: span ($i);
+      }
+
+      .row-#{$i}-xs {
+        grid-row: span ($i);
+      }
+  }
+
+    @include sm {
+
+      @for $j from 1 through 12 {
+        .grid-col-#{$i}-row-#{$j}-sm {
+          @include grid($i, $j);
+        } 
+      }
+
+      .col-#{$i}-sm {
+        grid-column: span ($i);
+      }
+
+      .row-#{$i}-sm {
+        grid-row: span ($i);
+      }
+  }
+
+  @include md {
+
+    @for $j from 1 through 12 {
+      .grid-col-#{$i}-row-#{$j}-md {
+        @include grid($i, $j);
+      } 
+    }
+
+    .col-#{$i}-md {
+      grid-column: span ($i);
+    }
+
+    .row-#{$i}-md {
+      grid-row: span ($i);
+    }
+}
+
+@include lg {
+
+  @for $j from 1 through 12 {
+    .grid-col-#{$i}-row-#{$j}-lg {
+      @include grid($i, $j);
+    } 
+  }
+
+  .col-#{$i}-lg {
+    grid-column: span ($i);
+  }
+
+  .row-#{$i}-lg {
+    grid-row: span ($i);
+  }
+}
+
+  @include xl {
+
+      @for $j from 1 through 12 {
+        .grid-col-#{$i}-row-#{$j}-xl {
+          @include grid($i, $j);
+        } 
+      }
+      .col-#{$i}-xl {
+        grid-column: span ($i);
+      }
+
+      .row-#{$i}-xl {
+        grid-row: span ($i);
+      }
+  }
+}
+
+// grid gaps
+@each $key, $val in $grid-gaps {
+  .gap-#{$key} {
+    grid-gap: $val;
+  }
+}
+
+// justify content classes
+@each $val in $layout-values {
+  .justify-#{$val} {
+    justify-content: $val;
+  }
+}
+

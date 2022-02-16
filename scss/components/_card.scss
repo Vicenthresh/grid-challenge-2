@@ -1,0 +1,52 @@
+@use 'sass:math';
+
+.card {
+    display: block;
+    padding: $base-padding;
+    border: $base-border-thickness solid #ddd;
+    box-shadow: $base-box-shadow;
+    border-radius: math.div($base-border-radius,2);
+  
+    .card-title {
+      font-family: 'Big Shoulders Display', cursive;
+    }
+
+    .card-bold-quote {
+      font-size: $font-size-lg;
+      font-weight: 600;
+    }
+
+    .card-body {
+      font-size: $base-font-size;
+      line-height: 1.6;
+    }
+  }
+
+  .article-card {
+    display: flex;
+    width: 100%;
+    max-width: 960px;
+    max-height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .card-grid {
+
+    
+
+    .card-title {
+      text-transform: uppercase;
+      font-family: 'Big Shoulders Display', cursive;
+      color: $very-light-gray;
+      padding: $base-padding 0;
+    }
+  
+    .card-body {
+      color: $transparent-white;
+      line-height: 1.6;
+    }
+  
+  }
+
+  

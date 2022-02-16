@@ -1,0 +1,37 @@
+// Primary
+$primary: hsl(31, 77%, 52%);
+$secondary: hsl(184, 100%, 22%);
+$secondary-dark: hsl(179, 100%, 13%);
+
+// Neutral
+$transparent-white: hsla(0, 0%, 100%, 0.75); 
+$very-light-gray: hsl(0, 0%, 95%);
+
+// color palette
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "secondary-dark": $secondary-dark,
+  "transparent-white": $transparent-white,
+  "very-light-gray": $very-light-gray,
+  "black": black,
+  "white": white,
+);
+
+// spacing
+$base-padding: 0.55rem;
+$base-margin: 0.75rem;
+
+// borders
+$base-border-thickness: 1px;
+$base-border-radius: 20px;
+
+// box-shadow
+$base-box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+
+// font sizes
+$base-font-size: 0.75rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.75;
+$font-size-xl: $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;
