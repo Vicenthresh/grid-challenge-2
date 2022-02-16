@@ -33,31 +33,33 @@
 
     @media (min-width: 960px) {
       &.card-l {
-        border-bottom-left-radius: 15px;
-        border-top-left-radius: 15px;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
       }
   
       &.card-r {
-        border-bottom-right-radius: 15px;
-        border-top-right-radius: 15px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
       }
     }
       
       @media (max-width: 960px) {
         &.card-l {
-          border-top-right-radius: 15px;
-          border-top-left-radius: 15px;
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
         }
     
         &.card-r {
-          border-bottom-right-radius: 15px;
-          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 10px;
+          border-bottom-left-radius: 10px;
         }
       }
 
     .card-title {
       text-transform: uppercase;
       font-family: 'Big Shoulders Display', cursive;
+      font-weight: 700;
+      font-size: 3em;
       color: $very-light-gray;
       padding: $base-padding 0;
     }
