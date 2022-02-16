@@ -27,13 +27,33 @@
     width: 100%;
     max-width: 960px;
     max-height: 100%;
-    border-radius: 15px;
-    overflow: hidden;
   }
 
   .card-grid {
 
+    @media (min-width: 960px) {
+      &.card-l {
+        border-bottom-left-radius: 15px;
+        border-top-left-radius: 15px;
+      }
+  
+      &.card-r {
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+    }
+      
+      @media (max-width: 960px) {
+        &.card-l {
+          border-top-right-radius: 15px;
+          border-top-left-radius: 15px;
+        }
     
+        &.card-r {
+          border-bottom-right-radius: 15px;
+          border-bottom-left-radius: 15px;
+        }
+      }
 
     .card-title {
       text-transform: uppercase;
@@ -46,7 +66,7 @@
       color: $transparent-white;
       line-height: 1.6;
     }
-  
   }
+
 
   

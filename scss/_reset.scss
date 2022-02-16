@@ -8,6 +8,7 @@
   margin: 0;
 }
 
+@media (min-width: 960px) {
 body {
   font-family: 'Lexend Deca', sans-serif;
   font-size: 15px;
@@ -16,7 +17,21 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: $base-padding * 4;
 }
+}
+
+@media (min-width: 0px) {
+  body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: $base-padding * 4;
+  }
+  }
 
 img {
   max-width: 100%;
